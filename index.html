@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Samurai Style Maze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="startupScreen">
+        <h1>Welcome, Samurai!</h1>
+        <input id="nameInput" type="text" placeholder="Enter your Samurai name" />
+        <input id="ageInput" type="number" placeholder="Enter your age" />
+        <button id="startButton" onclick="startGame()">Enter Maze</button>
+    </div>
+
+    <div id="gameScreen" style="display: none;">
+        <h2>Maze Game</h2>
+        <div id="maze" class="maze"></div>
+        <p id="instructions">Use W, A, S, D to move.</p>
+    </div>
+
+    <div id="bossBattleScreen" style="display:none;">
+        <h2>!!! CYBER-SKULL ENCOUNTERED !!!</h2>
+        <div id="skullGrid" class="maze"></div>
+        <p id="bossInstruction"></p>
+        <input id="bossInput" type="text" placeholder="Enter Code..." maxlength="3" autocomplete="off"/>
+        <button onclick="submitBossCode()">Submit</button>
+        <p id="timer">Timer: 7</p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
